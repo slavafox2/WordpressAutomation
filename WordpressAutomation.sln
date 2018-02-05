@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordpressAutomation", "WordpressAutomation\WordpressAutomation.csproj", "{08EFFEF9-3CB8-4105-BC90-6CF621FFECFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordpressTests", "UnitTestProject1\WordpressTests.csproj", "{82824A58-63FA-4F73-80E9-07E7E1296397}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08EFFEF9-3CB8-4105-BC90-6CF621FFECFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08EFFEF9-3CB8-4105-BC90-6CF621FFECFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08EFFEF9-3CB8-4105-BC90-6CF621FFECFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08EFFEF9-3CB8-4105-BC90-6CF621FFECFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82824A58-63FA-4F73-80E9-07E7E1296397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82824A58-63FA-4F73-80E9-07E7E1296397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82824A58-63FA-4F73-80E9-07E7E1296397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82824A58-63FA-4F73-80E9-07E7E1296397}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
