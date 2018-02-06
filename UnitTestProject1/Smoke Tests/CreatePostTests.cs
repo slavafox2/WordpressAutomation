@@ -9,20 +9,11 @@ using WordpressAutomation;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class CreatePostTests
+    public class CreatePostTests : WordpressTests
     {
-        [TestInitialize]
-        public void Init()
-        {
-            Driver.Initialize();
-        }
-
         [TestMethod]
         public void Can_Create_A_Basic_Post()
         {
-            LoginPage.GoTo();
-            LoginPage.LoginAs("admin").WithPassword("admin").Login();
-
             NewPostPage.GoTo();
             NewPostPage.CreatePost("This is the test post title")
                 .WithBody("Hi, this is the body")
@@ -33,10 +24,5 @@ namespace UnitTestProject1
             Assert.AreEqual(PostPage.Title, "This is the test post title", "This did not match new post");
         }
 
-        [TestCleanup]
-        public void Cleanup()
-        {
-            //Driver.Close();
-        }
     }
 }

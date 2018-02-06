@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WordpressAutomation.Navigation;
 
 namespace WordpressAutomation
 {
@@ -14,8 +15,7 @@ namespace WordpressAutomation
             switch (postType)
             {
                 case PostType.Page:
-                    Driver.Instance.FindElement(By.Id("menu-pages")).Click();
-                    Driver.Instance.FindElement(By.LinkText("All Pages")).Click();
+                    LeftNavigation.Pages.AllPages.Select();
                     break;
             }
         }

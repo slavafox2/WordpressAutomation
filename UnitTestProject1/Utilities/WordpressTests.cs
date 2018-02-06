@@ -8,33 +8,20 @@ using WordpressAutomation;
 
 namespace UnitTestProject1
 {
-    [TestClass]
-    public class PageTests
+    public class WordpressTests
     {
         [TestInitialize]
         public void Init()
         {
             Driver.Initialize();
-        }
-
-        [TestMethod]
-        public void Can_Edit_A_Page()
-        {
             LoginPage.GoTo();
             LoginPage.LoginAs("admin").WithPassword("admin").Login();
-
-            ListPostsPage.GoTo(PostType.Page);
-            ListPostsPage.SelectPost("Sample Page");
-
-            Assert.IsTrue(NewPostPage.IsInEditMode(), "Wasn't in edit mode");
-            Assert.AreEqual("Sample Page", NewPostPage.Title, "Title did not match");
-
         }
 
         [TestCleanup]
         public void Cleanup()
         {
-            //Driver.Close();
+            Driver.Close();
         }
     }
 }

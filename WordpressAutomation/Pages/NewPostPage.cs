@@ -5,20 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using WordpressAutomation.Navigation;
 
 namespace WordpressAutomation
 {
     public class NewPostPage
     {
         
-
         public static void GoTo()
         {
-            var menuPosts = Driver.Instance.FindElement(By.Id("menu-posts"));
-            menuPosts.Click();
-
-            var addNew = Driver.Instance.FindElement(By.LinkText("Add New"));
-            addNew.Click();
+            LeftNavigation.Posts.AddNew.Select();
         }
 
         public static CreatePostCommand CreatePost(string title)
@@ -57,6 +53,7 @@ namespace WordpressAutomation
 
     }
 
+
     public class CreatePostCommand
     {
         private readonly string title;
@@ -69,7 +66,8 @@ namespace WordpressAutomation
             Driver.Instance.SwitchTo().ActiveElement().SendKeys(body);
             Driver.Instance.SwitchTo().DefaultContent();
 
-            Thread.Sleep(1000);
+            Driver.Wait(TimeSpan.FromSeconds(1));
+            
 
             Driver.Instance.FindElement(By.Id("publish")).Click();
         }

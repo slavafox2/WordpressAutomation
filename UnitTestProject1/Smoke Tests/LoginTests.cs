@@ -5,29 +5,14 @@ using WordpressAutomation;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class LoginTests
-    {
-        [TestInitialize]
-        public void Init()
-        {
-            Driver.Initialize();
-        }
-
+    public class LoginTests : WordpressTests
+    {        
         [TestMethod]
         public void Admin_User_Can_Login()
         {
-            LoginPage.GoTo();
-            LoginPage.LoginAs("admin").WithPassword("admin").Login();
-
-            Assert.IsTrue(DashboardPage.IsAt, "my Failed to login");
-           
+            Assert.IsTrue(DashboardPage.IsAt, "my Failed to login");           
         }
-
-        [TestCleanup]
-        public void Cleanup()
-        {
-            Driver.Close();
-        }
+        
     }
 }
 

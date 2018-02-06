@@ -12,21 +12,12 @@ namespace WordpressAutomation
     public class LoginPage
     {
         public static void GoTo()
-        {
-            Driver.Instance.Navigate().GoToUrl("http://localhost/mysite/wp-login.php");
+        {            
+            Driver.Instance.Navigate().GoToUrl(Driver.BaseAddress + "wp-login.php");
 
             var wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
             wait.Until(d => d.SwitchTo().ActiveElement().GetAttribute("id") == "user_login");
-
-            #region commented service
-            //FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"C:\users\sl\documents\visual studio 2015\Projects\WordpressAutomation\WordpressAutomation\bin\Debug", "geckodriver.exe");
-
-            //service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
-
-            //var driver = new FirefoxDriver(service);
-
-            //driver.Navigate().GoToUrl("http://localhost/mysite/wp-login.php");
-            #endregion
+           
         }
 
         public static LoginCommand LoginAs(string userName)

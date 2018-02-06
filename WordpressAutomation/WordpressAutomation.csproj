@@ -59,18 +59,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="DashboardPage.cs" />
-    <Compile Include="Driver.cs" />
-    <Compile Include="ListPostsPage.cs" />
-    <Compile Include="LoginPage.cs" />
-    <Compile Include="NewPostPage.cs" />
-    <Compile Include="PostPage.cs" />
+    <Compile Include="Navigation\MenuSelector.cs" />
+    <Compile Include="Pages\DashboardPage.cs" />
+    <Compile Include="Selenuim\Driver.cs" />
+    <Compile Include="Pages\ListPostsPage.cs" />
+    <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="Navigation\LeftNavigation.cs" />
+    <Compile Include="Pages\NewPostPage.cs" />
+    <Compile Include="Pages\PostPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Selenium.Firefox.WebDriver.0.19.1\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\packages\Selenium.Firefox.WebDriver.0.19.1\build\Selenium.Firefox.WebDriver.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
